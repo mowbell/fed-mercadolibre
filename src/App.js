@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import { Link, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+
+import Detail from './pages/Detail';
+import Home from './pages/Home';
+import React from 'react';
+import Results from './pages/Results/index';
+import SearchBox from './components/SearchBox';
+import styled from 'styled-components';
+
+const MainContainer = styled.main`background-color: "#EEE";`;
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Router>
+			<MainContainer>
+				<SearchBox />
+				<Switch>
+					<Route path="/items/:id">
+						<Detail />
+					</Route>
+					<Route path="/items">
+						<Results />
+					</Route>
+					<Route path="/">
+						<Home />
+					</Route>
+				</Switch>
+			</MainContainer>
+		</Router>
+	);
 }
 
 export default App;

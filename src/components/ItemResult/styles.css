@@ -1,0 +1,38 @@
+.item-result {
+	border-bottom: 1px solid #eee;
+	margin: 0;
+	text-decoration: none;
+	color: #333;
+}
+.item-result__info {
+	width: 80%;
+	display: flex;
+	padding: 1rem 0;
+}
+.item-result__thumbnail {
+	border-radius: 0.5rem;
+	height: 11.25rem;
+	width: 11.25rem;
+	flex-shrink: 0;
+	overflow: hidden;
+}
+.item-result__city {
+	padding-top: 2rem;
+	font-size: 0.75rem;
+	width: 20%;
+}
+
+.item-result__details {
+	padding: 1rem;
+}
+
+.item-result__price {
+	font-size: 1.5rem;
+	text-decoration: none;
+}
+
+.item-result__title {
+	margin-top: 2rem;
+	font-size: 1.125rem;
+	text-decoration: none;
+}
